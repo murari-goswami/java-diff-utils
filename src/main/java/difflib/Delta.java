@@ -149,5 +149,28 @@ public abstract class Delta<T> {
             return false;
         return true;
     }
+	public static void main(String[] args) 
+    { 
+        // create Quartet 
+        Quartet<String, String, String, String> 
+            quartet = new Quartet<String, String, String, String>( 
+                "Quartet", "Triplet", "Pair", "Unit"); 
+  
+        // Print Quartet 
+        System.out.println("Quartet: " + quartet); 
+  
+        // Create Quintet from Quartet 
+        Quintet<String, String, String, String, String> 
+            quintet = new Quintet<String, String, String, String, String>( 
+                "Quintet 1", 
+                quartet.getValue0(), 
+                quartet.getValue1(), 
+                quartet.getValue2(), 
+                quartet.getValue3()); 
+  
+        // Print Quintet 
+        System.out.println("Quintet: " + quintet); 
+    } 
+	
     
 }
